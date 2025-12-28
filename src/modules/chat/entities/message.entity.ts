@@ -42,4 +42,7 @@ export class Message {
 
   @ManyToOne(() => User, (user) => user.messages, { onDelete: 'CASCADE' })
   room: Room;
+
+  @ManyToOne(() => User, (user) => user.messages, { onDelete: 'CASCADE' })
+  sender: User;
 }
