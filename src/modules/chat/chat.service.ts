@@ -22,13 +22,13 @@ export class ChatService {
 
   async createRoom(data: {
     name: string;
-    desciprtion?: string;
+    descriprtion?: string;
     isPrivate?: boolean;
     createdById: string;
   }): Promise<Room> {
     const room = this.roomRepository.create({
       name: data.name,
-      description: data.desciprtion,
+      description: data.descriprtion,
       isPrivate: data.isPrivate ?? true,
       createdById: data.createdById,
     });

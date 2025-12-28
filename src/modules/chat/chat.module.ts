@@ -5,7 +5,6 @@ import { Room } from './entities/room.entity';
 import { RoomMember } from './entities/room-member.entity';
 
 @Module({
-    imports: [
-        TypeOrmModule.forFeature([Message, Room, RoomMember]),
-    ]
+  imports: [TypeOrmModule.forFeature([Message, Room, RoomMember])],
 })
+export class ChatModule {}
